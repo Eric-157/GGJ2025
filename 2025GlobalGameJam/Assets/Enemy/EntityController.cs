@@ -61,6 +61,6 @@ public class EntityController : MonoBehaviour
 
     void FixedUpdate()
     {
-        rigidbody2d.velocity = new Vector2(speed * moveDir, rigidbody2d.velocity.y);
+        rigidbody2d.velocity = new Vector2(speed * -transform.right.x, rigidbody2d.velocity.y);
     }
 }
