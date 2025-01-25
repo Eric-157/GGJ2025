@@ -812,6 +812,7 @@ MonoBehaviour:
   areas:
   - {fileID: 11400000, guid: 51a17cb8a32d06441b4907873aa6ae87, type: 2}
   - {fileID: 11400000, guid: a3fe1dd3908732149b95a1ba698382b9, type: 2}
+  - {fileID: 11400000, guid: 31ef63ead57f03c47951eaa3e6573461, type: 2}
   - {fileID: 11400000, guid: dcd5a4da08b97134ea5e4fab512a723f, type: 2}
 --- !u!1 &1389975501
 GameObject:
@@ -862,6 +863,7 @@ MonoBehaviour:
   areaManager: {fileID: 1377471247}
   upper: {fileID: 133602462}
   lower: {fileID: 185249065}
+  speed: 1
 --- !u!1 &1502466574
 GameObject:
   m_ObjectHideFlags: 0

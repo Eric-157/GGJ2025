@@ -4,15 +4,5 @@ using UnityEngine;
 
 public class SpawnSlot : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    // This is low key just a marker script, idk man it works
 }
