@@ -11,5 +11,4 @@ public class EntityBehavior : ScriptableObject
     public float COLLIDER_Y;
     public Sprite ENTITY_SPRITE;
     public string TAG;
-    public int isFlipped = 1;
 }

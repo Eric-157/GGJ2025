@@ -12,11 +12,14 @@ public class PlayerController : MonoBehaviour
 
     private Rigidbody2D rb;
     private BoxCollider2D boxCollider2D;
+    private SpriteRenderer spriteRenderer;
     private float xAxis = 0;
+    public bool canBeDamaged = true;
 
     // Start is called before the first frame update
     void Start()
     {
+        spriteRenderer = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
         health = maxHealth;
     }
@@ -27,15 +30,30 @@ public class PlayerController : MonoBehaviour
         xAxis = Input.GetAxisRaw("Horizontal");
     }
 
-    void FixedUpdate(){
+    void FixedUpdate()
+    {
         rb.velocity = new Vector2(xAxis * speed, rb.velocity.y);
     }
 
-    private void OnTriggerEnter2D(Collider2D collider){
+    private void OnTriggerEnter2D(Collider2D collider)
+    {
         EntityController entityController = collider.gameObject.GetComponent<EntityController>();
         Debug.Log(entityController.goodTag);
-        if (entityController.goodTag == "Pickup"){
+        if (entityController.goodTag == "Pickup")
+        {
             Destroy(collider.gameObject);
         }
+        if (entityController.goodTag == "Enemy" && canBeDamaged)
+        {
+            health--;
+            canBeDamaged = false;
+            StartCoroutine("DamageInvuln");
+        }
+    }
+
+    IEnumerator DamageInvuln()
+    {
+        yield return new WaitForSeconds(1);
+        canBeDamaged = true;
     }
 }

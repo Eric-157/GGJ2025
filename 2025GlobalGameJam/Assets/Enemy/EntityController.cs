@@ -33,22 +33,34 @@ public class EntityController : MonoBehaviour
         colliderY = entityBehavior.COLLIDER_Y;
         entitySprite = entityBehavior.ENTITY_SPRITE;
         goodTag = entityBehavior.TAG;
-        moveDir = entityBehavior.isFlipped;
 
-        entityCollider.size = new Vector2(colliderX,colliderY);
+        entityCollider.size = new Vector2(colliderX, colliderY);
         spriteRenderer.sprite = entitySprite;
         rigidbody2d.gravityScale = gravityScale;
+
+        if (transform.position.x > 1)
+        {
+            moveDir = -1;
+        }
+        if (transform.position.x < -1)
+        {
+            moveDir = +1;
+        }
+
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(transform.position.y <= killY){
+        if (transform.position.y <= killY)
+        {
             Destroy(gameObject);
         }
     }
 
-    void FixedUpdate(){
+    void FixedUpdate()
+    {
         rigidbody2d.velocity = new Vector2(speed * moveDir, rigidbody2d.velocity.y);
     }
 }
