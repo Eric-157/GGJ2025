@@ -4,8 +4,12 @@ using Unity.VisualScripting;
 using UnityEngine;
 
 [CreateAssetMenu]
-public class AreaEncounters : ScriptableObject
+public class AreaDef : ScriptableObject
 {
+    public int repeat;
+
+    public Sprite background;
+
     public List<Encounter> encounters = new();
 
     [System.Serializable]

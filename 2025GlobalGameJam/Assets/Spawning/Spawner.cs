@@ -4,30 +4,20 @@ using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
 {
-    public List<AreaEncounters> areas = new();
+    public AreaManager areaManager;
 
     public List<SpawnSlot> spawnSlots = new();
 
-    private int currentArea = 0;
-
     private List<float> timers = new();
 
-    public void ChangeArea(int area)
+    public void OnAreaChange()
     {
-        currentArea = area;
-
         // Ensure timers has the same length as the current encounter table
         timers.Clear();
-        for (int i = 0; i < areas[area].encounters.Count; i++)
+        for (int i = 0; i < areaManager.Current().encounters.Count; i++)
         {
             timers.Add(0);
         }
-    }
-
-    public void Awake()
-    {
-        // Ensure timers is set up
-        ChangeArea(0);
     }
 
     public void Update()
@@ -37,7 +27,7 @@ public class SpawnManager : MonoBehaviour
         {
             timers[i] += Time.deltaTime;
 
-            var encounter = areas[currentArea].encounters[i];
+            var encounter = areaManager.Current().encounters[i];
 
             // If interval hasn't passed, skip the rest of this code
             if (timers[i] < encounter.interval) continue;
