@@ -29,6 +29,11 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        scoreTextObj = GameObject.FindGameObjectsWithTag("ScoreText");
+        scoreText = scoreTextObj[0].GetComponent<TextMeshProUGUI>();
+        scoreText.text = score.ToString();
+
+
         boxCollider2D = GetComponent<BoxCollider2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
