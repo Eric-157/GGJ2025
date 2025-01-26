@@ -23,7 +23,8 @@ public class PlayerController : MonoBehaviour
     private GameObject[] scoreTextObj;
     private TextMeshProUGUI scoreText;
     public bool startScoring;
-
+    public Animator animator;
+    public AnimationClip animationClip;
 
 
 
@@ -47,11 +48,19 @@ public class PlayerController : MonoBehaviour
     {
         xAxis = Input.GetAxisRaw("Horizontal");
         yAxis = Input.GetAxisRaw("Vertical");
+        if (health <= 0)
+        {
+            //animator.;
+        }
     }
 
     void FixedUpdate()
     {
         rb.velocity = new Vector2(xAxis * speed, yAxis * speed);
+        transform.position = new Vector2(
+            Mathf.Clamp(transform.position.x, -5.5f, -2.5f),
+            Mathf.Clamp(transform.position.y, -3.5f, 3.5f)
+            );
         if (health > 0 && startScoring)
         {
             scoreMultiplier++;

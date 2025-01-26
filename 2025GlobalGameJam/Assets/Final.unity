@@ -302,6 +302,14 @@ PrefabInstance:
       propertyPath: health
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5335262927879258059, guid: d2a1703f96d13bd4fa7b603dab2b9fb5, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1454370853}
+    - target: {fileID: 5335262927879258059, guid: d2a1703f96d13bd4fa7b603dab2b9fb5, type: 3}
+      propertyPath: animationClip
+      value: 
+      objectReference: {fileID: 7400000, guid: 496ae3bd579476945aab9c3e393b5b33, type: 2}
     - target: {fileID: 7225333578622656186, guid: d2a1703f96d13bd4fa7b603dab2b9fb5, type: 3}
       propertyPath: m_Name
       value: Player
@@ -4321,6 +4329,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be328dd8e194f3d47ac6b84d2a3eda66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &1454370853 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 593479013845418999, guid: d2a1703f96d13bd4fa7b603dab2b9fb5, type: 3}
+  m_PrefabInstance: {fileID: 69617937}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1475899468
 GameObject:
   m_ObjectHideFlags: 0
