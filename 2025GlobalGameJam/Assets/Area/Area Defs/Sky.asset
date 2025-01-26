@@ -12,6 +12,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5132d37400952364f9eb51ccb7d9e7db, type: 3}
   m_Name: Sky
   m_EditorClassIdentifier: 
-  iterations: 1
+  repeat: 0
   background: {fileID: 21300000, guid: edd426fad0ecc0f40ab8c22a53d9fda5, type: 3}
-  encounters: []
+  encounters:
+  - interval: 0.4
+    slots: 00000000010000000300000004000000
+    prefabs:
+    - {fileID: 1209188649004327071, guid: 7431164dd4f0f1e4d96c9ca83ef42762, type: 3}
+    - {fileID: 1209188649004327071, guid: 3907db70716922143a9b9b927cb0f537, type: 3}
+  - interval: 7
+    slots: 02000000
+    prefabs:
+    - {fileID: 1209188649004327071, guid: 6bfd4c44ed204bf49b3a8c67d258b899, type: 3}
+    - {fileID: 1209188649004327071, guid: 2fec6b736ec10a54fa7eb69bb0917cbd, type: 3}
+    - {fileID: 1209188649004327071, guid: 830b0b5f5634b264ea0d4766e98697ef, type: 3}
+  - interval: 1.5
+    slots: 02000000
+    prefabs:
+    - {fileID: 1209188649004327071, guid: 0376d2dc889805b4fb2785a81eb47787, type: 3}
