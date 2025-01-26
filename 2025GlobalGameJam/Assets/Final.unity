@@ -5687,6 +5687,8 @@ MonoBehaviour:
   gameStart: 0
   gameStop: 0
   playerController: {fileID: 1454370852}
+  start: {fileID: 1585900245}
+  stop: {fileID: 588900150}
 --- !u!4 &1707963184
 Transform:
   m_ObjectHideFlags: 0
