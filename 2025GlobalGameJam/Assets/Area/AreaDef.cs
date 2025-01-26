@@ -11,6 +11,8 @@ public class AreaDef : ScriptableObject
 
     public List<Encounter> encounters = new();
 
+    public AudioClip music;
+
     [System.Serializable]
     public class Encounter
     {

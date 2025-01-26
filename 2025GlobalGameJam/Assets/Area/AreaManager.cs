@@ -6,6 +6,7 @@ public class AreaManager : MonoBehaviour
 {
     public SpawnManager spawnManager;
     public Background background;
+    public AudioSource audioSource;
 
     public List<AreaDef> areas = new();
 
@@ -13,8 +14,10 @@ public class AreaManager : MonoBehaviour
 
     private int currentRepeat = 0;
 
+
     public void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         spawnManager.OnAreaChange();
         background.OnAreaChange();
     }
@@ -42,6 +45,8 @@ public class AreaManager : MonoBehaviour
 
     public AreaDef Upcomming()
     {
+        audioSource.clip = areas[currentArea].music;
+        audioSource.Play();
         // If this is the final area, just loop indefinetly
         if (currentArea == areas.Count - 1) return Current();
 

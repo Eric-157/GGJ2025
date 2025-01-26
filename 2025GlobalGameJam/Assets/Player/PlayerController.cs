@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using TMPro;
 
 public class PlayerController : MonoBehaviour
 {
@@ -17,10 +18,22 @@ public class PlayerController : MonoBehaviour
     private float yAxis;
     public bool canBeDamaged = true;
     public int r, b, g;
+    public int score;
+    public int scoreMultiplier;
+    private GameObject[] scoreTextObj;
+    private TextMeshProUGUI scoreText;
+
+
+
 
     // Start is called before the first frame update
     void Start()
     {
+        scoreTextObj = GameObject.FindGameObjectsWithTag("ScoreText");
+        scoreText = scoreTextObj[0].GetComponent<TextMeshProUGUI>();
+        scoreText.text = score.ToString();
+
+
         boxCollider2D = GetComponent<BoxCollider2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
@@ -37,19 +50,22 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate()
     {
         rb.velocity = new Vector2(xAxis * speed, yAxis * speed);
+        scoreMultiplier++;
+        score += 1;
+        scoreText.text = score.ToString();
     }
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
         EntityController entityController = collider.gameObject.GetComponent<EntityController>();
-        Debug.Log(entityController.goodTag);
+        //Debug.Log(entityController.goodTag);
         if (entityController.goodTag == "Pickup")
         {
             Destroy(collider.gameObject);
             if (health < maxHealth)
             {
                 health++;
-
+                score += scoreMultiplier;
             }
         }
         if (entityController.goodTag == "Enemy" && canBeDamaged)
