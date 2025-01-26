@@ -60,7 +60,7 @@ public class AreaManager : MonoBehaviour
 
     void Update()
     {
-        if (gameManager.gameStop)
+        if (gameManager.gameStop && !gameManager.gameStart)
         {
             spawnManager.isRunning = false;
             background.isRunning = false;
