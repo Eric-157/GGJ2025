@@ -12,7 +12,7 @@ public class StartStop : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -27,6 +27,7 @@ public class StartStop : MonoBehaviour
         if (playerController.health <= 0)
         {
             gameStop = true;
+            playerController.gameObject.SetActive(false);
         }
         if (Input.GetKeyDown(KeyCode.Escape))
         {

@@ -30,6 +30,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         scoreTextObj = GameObject.FindGameObjectsWithTag("ScoreText");
+        Debug.Log(scoreTextObj.Length);
         scoreText = scoreTextObj[0].GetComponent<TextMeshProUGUI>();
         scoreText.text = score.ToString();
 
@@ -50,9 +51,12 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate()
     {
         rb.velocity = new Vector2(xAxis * speed, yAxis * speed);
-        scoreMultiplier++;
-        score += 1;
-        scoreText.text = score.ToString();
+        if (health > 0)
+        {
+            scoreMultiplier++;
+            score += 1;
+            scoreText.text = score.ToString();
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collider)
