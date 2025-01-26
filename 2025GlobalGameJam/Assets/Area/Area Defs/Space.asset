@@ -15,10 +15,15 @@ MonoBehaviour:
   repeat: 0
   background: {fileID: 21300000, guid: 2dc2586823aa508498ee6213d39a5c6e, type: 3}
   encounters:
-  - interval: 0.3
-    slots: 00000000010000000300000004000000
+  - interval: 0.4
+    slots: 0000000001000000
     prefabs:
     - {fileID: 1209188649004327071, guid: 052cc3b1ae720f4408c022dfc5f209e3, type: 3}
+    - {fileID: 1209188649004327071, guid: cc058db583b22414697e400982e1fedb, type: 3}
+  - interval: 0.4
+    slots: 0300000004000000
+    prefabs:
+    - {fileID: 1209188649004327071, guid: 9c1d9ad81bc18ea40821b5655dbde429, type: 3}
     - {fileID: 1209188649004327071, guid: cc058db583b22414697e400982e1fedb, type: 3}
   - interval: 9
     slots: 02000000
