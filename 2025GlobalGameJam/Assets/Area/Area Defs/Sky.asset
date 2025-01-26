@@ -25,7 +25,7 @@ MonoBehaviour:
     prefabs:
     - {fileID: 1209188649004327071, guid: 92398a4ae6f0bd74498bc85f665651be, type: 3}
     - {fileID: 1209188649004327071, guid: a73712eae0be400488b913a354fa4fe0, type: 3}
-  - interval: 7
+  - interval: 6
     slots: 02000000
     prefabs:
     - {fileID: 1209188649004327071, guid: 6bfd4c44ed204bf49b3a8c67d258b899, type: 3}

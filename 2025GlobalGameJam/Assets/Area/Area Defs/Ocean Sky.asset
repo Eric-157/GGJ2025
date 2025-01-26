@@ -14,4 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   repeat: 0
   background: {fileID: 21300000, guid: 5a81fa2a184634843a9c68bd6cb78cdb, type: 3}
-  encounters: []
+  encounters:
+  - interval: 8
+    slots: 02000000
+    prefabs:
+    - {fileID: 1209188649004327071, guid: 6bfd4c44ed204bf49b3a8c67d258b899, type: 3}
+    - {fileID: 1209188649004327071, guid: 2fec6b736ec10a54fa7eb69bb0917cbd, type: 3}
+    - {fileID: 1209188649004327071, guid: 830b0b5f5634b264ea0d4766e98697ef, type: 3}

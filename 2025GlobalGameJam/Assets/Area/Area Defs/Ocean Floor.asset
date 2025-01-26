@@ -15,23 +15,9 @@ MonoBehaviour:
   repeat: 0
   background: {fileID: 21300000, guid: c7a7840345ae4b745af42326dba3f746, type: 3}
   encounters:
-  - interval: 0.75
-    slots: 0000000001000000
-    prefabs:
-    - {fileID: 1209188649004327071, guid: 9b72bb7bd1f40a240982d42c129aa8a0, type: 3}
-    - {fileID: 1209188649004327071, guid: ecd5dd0d46bd3a9429b2b90414b35dc4, type: 3}
-  - interval: 0.75
-    slots: 0300000004000000
-    prefabs:
-    - {fileID: 1209188649004327071, guid: fa9130e0d03c554459a3a6d05ec88b5a, type: 3}
-    - {fileID: 1209188649004327071, guid: e718bfd8ee92d9046af6a5f36aa01347, type: 3}
-  - interval: 5
+  - interval: 8
     slots: 02000000
     prefabs:
     - {fileID: 1209188649004327071, guid: 720dfe4e92431c647b67a99ba6feac61, type: 3}
-    - {fileID: 1209188649004327071, guid: 3b4bf61df92db5b4ebffad12c4eba62c, type: 3}
     - {fileID: 1209188649004327071, guid: 93f5a4c58368d43478ab4b6beee6fb26, type: 3}
-  - interval: 2
-    slots: 02000000
-    prefabs:
-    - {fileID: 1209188649004327071, guid: ba5505c8d4c35bb4aaf852abbb2bef52, type: 3}
+    - {fileID: 1209188649004327071, guid: 3b4bf61df92db5b4ebffad12c4eba62c, type: 3}
