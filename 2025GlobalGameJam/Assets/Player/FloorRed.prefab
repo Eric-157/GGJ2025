@@ -50,6 +50,7 @@ MonoBehaviour:
   entityBehavior: {fileID: 11400000, guid: fe0300b9739aa6a4a8b2dc182dd2eaec, type: 2}
   goodTag: 
   killY: -4
+  color: 71
 --- !u!61 &6508282131056479325
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -163,7 +164,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 6a0be10fd928ccc4bbad3cd9a2e09ec0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a4d20b4ca48caa041bf939b4dbaecd44, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
