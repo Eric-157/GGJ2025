@@ -7,6 +7,7 @@ public class SpawnManager : MonoBehaviour
     public AreaManager areaManager;
 
     public List<SpawnSlot> spawnSlots = new();
+    public bool isRunning;
 
     private List<float> timers = new();
 
@@ -22,31 +23,35 @@ public class SpawnManager : MonoBehaviour
 
     public void Update()
     {
-        // For every encounter table and timer
-        for (int i = 0; i < timers.Count; i++)
+        if (isRunning)
         {
-            timers[i] += Time.deltaTime;
+            for (int i = 0; i < timers.Count; i++)
+            {
+                timers[i] += Time.deltaTime;
 
-            var encounter = areaManager.Current().encounters[i];
+                var encounter = areaManager.Current().encounters[i];
 
-            // If interval hasn't passed, skip the rest of this code
-            if (timers[i] < encounter.interval) continue;
+                // If interval hasn't passed, skip the rest of this code
+                if (timers[i] < encounter.interval) continue;
 
-            timers[i] = 0;
+                timers[i] = 0;
 
-            var prefab = encounter.prefabs.Random();
-            var slot = spawnSlots[encounter.slots.Random()];
+                var prefab = encounter.prefabs.Random();
+                var slot = spawnSlots[encounter.slots.Random()];
 
-            var spawned = Instantiate(prefab);
+                var spawned = Instantiate(prefab);
 
-            // We don't simply set parent because we don't want to copy scale
-            spawned.transform.SetPositionAndRotation(slot.transform.position, slot.transform.rotation);
+                // We don't simply set parent because we don't want to copy scale
+                spawned.transform.SetPositionAndRotation(slot.transform.position, slot.transform.rotation);
 
-            // Adjust spawn edge so big objects don't go outside of the spawn area
-            var edge = slot.transform.localScale.x / 2 - spawned.transform.localScale.x / 2;
+                // Adjust spawn edge so big objects don't go outside of the spawn area
+                var edge = slot.transform.localScale.x / 2 - spawned.transform.localScale.x / 2;
 
-            // Adjust position to random spot within spawn area
-            spawned.transform.position += spawned.transform.right * Random.Range(-edge, edge);
+                // Adjust position to random spot within spawn area
+                spawned.transform.position += spawned.transform.right * Random.Range(-edge, edge);
+            }
         }
+        // For every encounter table and timer
+
     }
 }

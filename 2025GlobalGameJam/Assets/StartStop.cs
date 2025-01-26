@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class StartStop : MonoBehaviour
@@ -9,10 +10,13 @@ public class StartStop : MonoBehaviour
     private float xAxis;
     private float yAxis;
     public PlayerController playerController;
+    public GameObject start;
+    public GameObject stop;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        playerController.startScoring = false;
     }
 
     // Update is called once per frame
@@ -23,10 +27,18 @@ public class StartStop : MonoBehaviour
         if (xAxis > 0 || yAxis > 0)
         {
             gameStart = true;
+            playerController.startScoring = true;
         }
+        if (!gameStart)
+        {
+            start.SetActive(true);
+        }
+        else { start.SetActive(false); }
         if (playerController.health <= 0)
         {
             gameStop = true;
+            playerController.gameObject.SetActive(false);
+            stop.SetActive(true);
         }
         if (Input.GetKeyDown(KeyCode.Escape))
         {

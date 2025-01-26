@@ -7,6 +7,7 @@ public class AreaManager : MonoBehaviour
     public SpawnManager spawnManager;
     public Background background;
     public AudioSource audioSource;
+    public StartStop gameManager;
 
     public List<AreaDef> areas = new();
 
@@ -55,5 +56,20 @@ public class AreaManager : MonoBehaviour
 
         // We still have iterations, return current
         return Current();
+    }
+
+    void Update()
+    {
+        if (!gameManager.gameStop && gameManager.gameStart)
+        {
+            spawnManager.isRunning = true;
+            background.isRunning = true;
+        }
+        else
+        {
+            spawnManager.isRunning = false;
+            background.isRunning = false;
+        }
+
     }
 }

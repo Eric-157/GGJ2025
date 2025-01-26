@@ -9,6 +9,7 @@ public class Background : MonoBehaviour
     public SpriteRenderer upper;
 
     public SpriteRenderer lower;
+    public bool isRunning;
 
     public float speed = 1;
 
@@ -20,18 +21,22 @@ public class Background : MonoBehaviour
 
     public void Update()
     {
-        // Check to see if the upper background reached the lower anchor
-        if (upper.transform.position.y < lower.transform.parent.position.y)
+        if (isRunning)
         {
-            // Reset both back to their anchors
-            upper.transform.localPosition = Vector3.zero;
-            lower.transform.localPosition = Vector3.zero;
+            // Check to see if the upper background reached the lower anchor
+            if (upper.transform.position.y < lower.transform.parent.position.y)
+            {
+                // Reset both back to their anchors
+                upper.transform.localPosition = Vector3.zero;
+                lower.transform.localPosition = Vector3.zero;
 
-            areaManager.Progress();
+                areaManager.Progress();
+            }
+
+            // Scroll the background
+            upper.transform.position -= speed * Time.deltaTime * upper.transform.up;
+            lower.transform.position -= speed * Time.deltaTime * lower.transform.up;
         }
 
-        // Scroll the background
-        upper.transform.position -= speed * Time.deltaTime * upper.transform.up;
-        lower.transform.position -= speed * Time.deltaTime * lower.transform.up;
     }
 }

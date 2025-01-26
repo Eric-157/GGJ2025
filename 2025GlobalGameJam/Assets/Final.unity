@@ -851,6 +851,7 @@ MonoBehaviour:
   areaManager: {fileID: 1566661425}
   upper: {fileID: 206562174}
   lower: {fileID: 982993919}
+  isRunning: 0
   speed: 1
 --- !u!4 &208405365
 Transform:
@@ -2525,6 +2526,7 @@ MonoBehaviour:
   - {fileID: 1397495438}
   - {fileID: 2093633860}
   - {fileID: 2144028034}
+  isRunning: 0
 --- !u!4 &880494440
 Transform:
   m_ObjectHideFlags: 0
@@ -4892,6 +4894,7 @@ MonoBehaviour:
   spawnManager: {fileID: 880494439}
   background: {fileID: 208405364}
   audioSource: {fileID: 1566661427}
+  gameManager: {fileID: 1707963183}
   areas:
   - {fileID: 11400000, guid: 51a17cb8a32d06441b4907873aa6ae87, type: 2}
   - {fileID: 11400000, guid: a3fe1dd3908732149b95a1ba698382b9, type: 2}
@@ -5059,7 +5062,7 @@ GameObject:
   - component: {fileID: 1617485746}
   m_Layer: 5
   m_Name: Text (TMP) (2)
-  m_TagString: Untagged
+  m_TagString: ScoreText
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5684,6 +5687,8 @@ MonoBehaviour:
   gameStart: 0
   gameStop: 0
   playerController: {fileID: 1454370852}
+  start: {fileID: 1585900245}
+  stop: {fileID: 588900150}
 --- !u!4 &1707963184
 Transform:
   m_ObjectHideFlags: 0
