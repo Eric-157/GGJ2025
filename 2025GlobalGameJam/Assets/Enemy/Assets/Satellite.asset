@@ -10,12 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fc06ea5ced12310448b83e445e803d52, type: 3}
-  m_Name: good
+  m_Name: Satellite
   m_EditorClassIdentifier: 
-  SPEED: 0
-  GRAVITY_SCALE: 0
-  COLLIDER_X: 0
-  COLLIDER_Y: 0
-  ENTITY_SPRITE: {fileID: 21300000, guid: ae3287b10c0b28243912ec3b0fbcf3cc, type: 3}
-  TAG: '"Pickup"'
-  isFlipped: 1
+  SPEED: 0.5
+  GRAVITY_SCALE: 10
+  TAG: Enemy
+  COLOR: 85

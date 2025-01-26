@@ -12,10 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5132d37400952364f9eb51ccb7d9e7db, type: 3}
   m_Name: Ocean Floor
   m_EditorClassIdentifier: 
-  iterations: 1
+  repeat: 0
   background: {fileID: 21300000, guid: c7a7840345ae4b745af42326dba3f746, type: 3}
   encounters:
-  - interval: 1
+  - interval: 0.1
     slots: 0000000001000000020000000300000004000000
     prefabs:
-    - {fileID: 8335739625121924497, guid: e55d5cc29ba35ad40acbda55ef1947fe, type: 3}
+    - {fileID: 1209188649004327071, guid: 9b72bb7bd1f40a240982d42c129aa8a0, type: 3}
+  - interval: 0.01
+    slots: 02000000
+    prefabs:
+    - {fileID: 1209188649004327071, guid: 720dfe4e92431c647b67a99ba6feac61, type: 3}
+    - {fileID: 1209188649004327071, guid: 3b4bf61df92db5b4ebffad12c4eba62c, type: 3}
+    - {fileID: 1209188649004327071, guid: 93f5a4c58368d43478ab4b6beee6fb26, type: 3}

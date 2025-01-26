@@ -12,42 +12,34 @@ public class EntityController : MonoBehaviour
 
     private Rigidbody2D rigidbody2d;
     private SpriteRenderer spriteRenderer;
-    private BoxCollider2D entityCollider;
+    //private BoxCollider2D entityCollider;
     private float speed;
     private float gravityScale;
-    private float colliderX;
-    private float colliderY;
-    private Sprite entitySprite;
-    private int moveDir;
+    //private float colliderX;
+    //private float colliderY;
+    //private Sprite entitySprite;
+    //private int moveDir = 0;
+    public char color;
 
     // Start is called before the first frame update
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         rigidbody2d = GetComponent<Rigidbody2D>();
-        entityCollider = GetComponent<BoxCollider2D>();
+        //entityCollider = GetComponent<BoxCollider2D>();
 
         speed = entityBehavior.SPEED;
-        gravityScale = entityBehavior.GRAVITY_SCALE;
-        colliderX = entityBehavior.COLLIDER_X;
-        colliderY = entityBehavior.COLLIDER_Y;
-        entitySprite = entityBehavior.ENTITY_SPRITE;
+        gravityScale = entityBehavior.GRAVITY_SCALE * Random.Range(0.5f, 1.5f);
+        //colliderX = entityBehavior.COLLIDER_X;
+        //colliderY = entityBehavior.COLLIDER_Y;
+        //entitySprite = entityBehavior.ENTITY_SPRITE;
         goodTag = entityBehavior.TAG;
 
-        entityCollider.size = new Vector2(colliderX, colliderY);
-        spriteRenderer.sprite = entitySprite;
+        //entityCollider.size = new Vector2(colliderX, colliderY);
+        //spriteRenderer.sprite = entitySprite;
         rigidbody2d.gravityScale = gravityScale;
 
-        if (transform.position.x > 1)
-        {
-            moveDir = -1;
-        }
-        if (transform.position.x < -1)
-        {
-            moveDir = +1;
-        }
-
-
+        color = entityBehavior.COLOR;
     }
 
     // Update is called once per frame
@@ -61,6 +53,6 @@ public class EntityController : MonoBehaviour
 
     void FixedUpdate()
     {
-        rigidbody2d.velocity = new Vector2(speed * -transform.right.x, rigidbody2d.velocity.y);
+        rigidbody2d.velocity = transform.up * speed * Random.Range(0.5f, 1.5f);
     }
 }

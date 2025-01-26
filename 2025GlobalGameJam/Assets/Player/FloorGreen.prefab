@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2286767470180164794}
   - component: {fileID: 3610146785275557221}
   m_Layer: 0
-  m_Name: Enemy
+  m_Name: FloorGreen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -47,10 +47,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8765f21cc79fa24f9c67db37b5da9c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  entityBehavior: {fileID: 11400000, guid: 067ef1c249c77324d9e161f54685e5d7, type: 2}
+  entityBehavior: {fileID: 11400000, guid: 2aad2038f22597f4880b7c2c335a89b9, type: 2}
   goodTag: 
   killY: -4
-  color: 67
 --- !u!61 &6508282131056479325
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -87,7 +86,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.2, y: 0.2}
+    oldSize: {x: 1.28, y: 1.28}
     newSize: {x: 0.16, y: 0.16}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -164,7 +163,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: 3b1886b20302b2e42a88ffd7425f225e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
