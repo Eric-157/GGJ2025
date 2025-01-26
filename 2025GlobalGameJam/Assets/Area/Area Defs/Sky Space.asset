@@ -15,3 +15,4 @@ MonoBehaviour:
   repeat: 0
   background: {fileID: 21300000, guid: 3dfabd957b5a2474b83a6a1907368fc2, type: 3}
   encounters: []
+  music: {fileID: 8300000, guid: 8eab2b455d26ebb429607e578ef9e596, type: 3}

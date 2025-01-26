@@ -42,7 +42,7 @@ public class PlayerController : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collider)
     {
         EntityController entityController = collider.gameObject.GetComponent<EntityController>();
-        Debug.Log(entityController.goodTag);
+        //Debug.Log(entityController.goodTag);
         if (entityController.goodTag == "Pickup")
         {
             Destroy(collider.gameObject);
