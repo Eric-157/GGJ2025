@@ -21,3 +21,4 @@ MonoBehaviour:
     - {fileID: 1209188649004327071, guid: 701ef9c2962f03a4e9d48cb506631619, type: 3}
     - {fileID: 1209188649004327071, guid: 58dd008ad4db4c04a8d5d04977ad619f, type: 3}
     - {fileID: 1209188649004327071, guid: ae0a9c3df6fc7194ea6b39f1d9ebec38, type: 3}
+  music: {fileID: 8300000, guid: 97bd923469d71cf49b9f9e5a22ce9ff7, type: 3}

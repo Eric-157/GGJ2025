@@ -35,4 +35,4 @@ MonoBehaviour:
     slots: 02000000
     prefabs:
     - {fileID: 1209188649004327071, guid: 0376d2dc889805b4fb2785a81eb47787, type: 3}
-  music: {fileID: 8300000, guid: 9efea4787cc05de4899a600e401bbb33, type: 3}
+  music: {fileID: 8300000, guid: 5a38e15e587746d4abb377d71a8afa7a, type: 3}
