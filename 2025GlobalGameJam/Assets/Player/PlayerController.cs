@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour
     public int scoreMultiplier;
     private GameObject[] scoreTextObj;
     private TextMeshProUGUI scoreText;
+    public bool startScoring;
 
 
 
@@ -51,7 +52,7 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate()
     {
         rb.velocity = new Vector2(xAxis * speed, yAxis * speed);
-        if (health > 0)
+        if (health > 0 && startScoring)
         {
             scoreMultiplier++;
             score += 1;
