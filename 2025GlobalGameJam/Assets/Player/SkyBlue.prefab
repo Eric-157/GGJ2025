@@ -50,6 +50,7 @@ MonoBehaviour:
   entityBehavior: {fileID: 11400000, guid: f9ac7d2c7067bd747aeceb0a8ea4176e, type: 2}
   goodTag: 
   killY: -4
+  color: 726
 --- !u!61 &6508282131056479325
 BoxCollider2D:
   m_ObjectHideFlags: 0
